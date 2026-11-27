@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Aishwarya Vijayata T">
+  <meta name="description" content="Interactive, client-side To-Do List application supervising DOM manipulation, event handling, and local data persistence.">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <h1>Task Manager</h1>
+      <button id="theme-toggle" type="button" aria-label="Toggle color theme">🌙</button>
+    </header>
+
+    <form id="todo-form">
+      <input 
+        type="text" 
+        id="todo-input" 
+        aria-label="New task description"
+        placeholder="Got something to do?" 
+        autocomplete="off" 
+        required
+      >
+      <button type="submit">Add ➕</button>
+    </form>
+
+    <div class="filters" id="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Yet to do 👌</button>
+      <button class="filter-btn" data-filter="completed">Completed ✅</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <footer class="app-footer">
+      <div class="footer-controls">
+        <span id="task-count">0 items left</span>
+        <button id="clear-completed" type="button">Clear Completed</button>
+      </div>
+      <p class="author-credit">Built by Aishwarya Vijayata T</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
